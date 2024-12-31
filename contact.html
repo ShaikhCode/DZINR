@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        .contact-section h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #1e90ff; /* Vibrant Blue */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            text-align: center;
+            color: #ccc; /* Soft White */
+        }
+
+        /* Form Container */
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 98%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .form-container input:focus,
+        .form-container textarea:focus {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .form-container textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .form-container button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #1e90ff, #00d4ff);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .form-container button:hover {
+            background: linear-gradient(90deg, #00d4ff, #1e90ff);
+            transform: scale(1.05);
+        }
+
+        /* Decorative Elements */
+        .background-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 8s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        .background-circle:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .background-circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+
+        .background-circle:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            top: 30%;
+            right: 10%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>Have questions or need assistance? Drop us a message below, and we'll get back to you shortly.</p>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Decorative Circles -->
+        <div class="background-circle"></div>
+        <div class="background-circle"></div>
+        <div class="background-circle"></div>
+    </section>
+</body>
+</html>
