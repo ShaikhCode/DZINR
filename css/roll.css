@@ -1,0 +1,66 @@
+/* Carousel Container */
+.carousel {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+/* Carousel Track Styles */
+.carousel-track {
+    display: flex;
+    width: calc(200%); /* Since we duplicated the items */
+    animation: scroll 20s linear infinite;
+}
+
+.track-left {
+    animation-direction: normal; /* Left to Right */
+}
+
+.track-right {
+    animation-direction: reverse; /* Right to Left */
+}
+
+/* Carousel Item Styles */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 150px;
+    margin: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on Hover */
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 120px;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 100px;
+        margin: 5px;
+    }
+}
